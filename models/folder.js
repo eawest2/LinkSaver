@@ -6,7 +6,8 @@ const folderSchema = new Schema({
   description: { type: String, required: true },
   links:[{ 
       url: { type: String },
-      description: { type: String }
+      description: { type: String },
+      searchTerm: { type: String }
   }],
 //   subFolders: [{
 //       folder_id: { type: String }
