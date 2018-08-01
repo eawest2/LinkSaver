@@ -19,8 +19,8 @@ const LinkComp = props => (
                     </p>
                 </div>
                 <div className="col-xs-3">
-                    <img onClick={() => props.copy(props.url)} className="copy-icon m-1" id="copyButton" alt="Copy Link To Clipboard" src="./assets/images/icons/link.png"></img>
-                    <img onClick={() => props.deleteLink(props.folderID, props.url)} className="delete-icon m-1" id="deleteButton" alt="Delete Link From Folder" src="./assets/images/icons/delete.png"></img>
+                    <img onClick={() => props.copy(props.url)} className="copy-icon function-button m-1" id="copyButton" alt="Copy Link To Clipboard" src="./assets/images/icons/link.png"></img>
+                    <img onClick={() => props.deleteLink(props.folderID, props.url)} className="delete-icon function-button m-1" id="deleteButton" alt="Delete Link From Folder" src="./assets/images/icons/delete.png"></img>
                 </div>
             </div>
         </div>
