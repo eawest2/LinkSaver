@@ -57,7 +57,7 @@ export default {
     deleteLink: function (linkURL) {
         axios.defaults.headers.common['Authorization'] =
             'Bearer ' + localStorage.getItem('token');
-        return axios.delete(`${baseURL}deletelink/`, linkURL);
+        return axios.post(`${baseURL}deletelink/`, linkURL);
     },
 
 }
