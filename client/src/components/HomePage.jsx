@@ -11,17 +11,19 @@ class HomePage extends React.Component {
 
   render() {
     return (
-      <Card style={{ fontSize: '20px', color: 'black',  backgroundColor: 'slategray', textAlign: 'center' }} className="container">
-        <CardTitle style={{ fontSize: '20px', color: 'white', backgroundColor: 'slategray' }} title="LinkSaver" />
+      <div className="bg-secodnary">
+        <Card style={{textAlign: 'center', color: "white" }} className="container text-white bg-secondary">
+          <CardTitle className="bg-secondary text-white" style={{ fontSize: '28px'}}>LinkSaver</CardTitle>
           {Auth.isUserAuthenticated() ? (
-            <CardText >Welcome! You are logged in.</CardText>
+            <CardText className="bg-secondary text-white" >Welcome! You are logged in.</CardText>
           ) : (
-            <CardText>
-            <CardText style={{ fontSize: '20px', color: 'white', backgroundColor: 'slategray' }}>You are not logged in.</CardText>
-            <CardText style={{ fontSize: '20px', color: 'white', backgroundColor: 'slategray' }}>Please Select Log In or Sign Up.</CardText>
-            </CardText>
-          )}
-      </Card>
+              <CardText>
+                <CardText style={{ fontSize: '20px'}} className="bg-secondary text-white">You are not logged in.</CardText>
+                <CardText style={{ fontSize: '20px'}} className="bg-secondary text-white">Please Select Log In or Sign Up.</CardText>
+              </CardText>
+            )}
+        </Card>
+      </div>
     )
   }
 };
