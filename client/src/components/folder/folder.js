@@ -1,24 +1,9 @@
-import React from "react";
+import React, {Component} from "react";
 import "./folder.css";
 import Link from '../link/link';
 
-const Folder = props => (
-
-    <div className="col-12 py-2 m-2 bg-secondary text-white border border-2 border-white mt-4 rounded">
-
-        {/* <div className="row"> */}
-        <div className="col-8" onClick={() => props.setActiveFolder(props._id, "active")}>
-            <h4 className="col-10 mt-4">{props.name}</h4>
-        </div>
-        <div className="col-12">
-            <img onClick={() => props.copy(props._id)} className="copy-icon function-button m-1" id="copyButton" alt="Copy Link To Clipboard" src="./assets/images/icons/link.png"></img>
-            <img onClick={() => props.deleteFolder(props._id)} className="delete-icon function-button m-1" id="deleteButton" alt="Delete Link From Folder" src="./assets/images/icons/delete.png"></img>
-        </div>
-        {/* </div> */}
-        <div className="ml-4">
-            <p>{props.description}</p>
-        </div>
-
+const linkStuff = (props) => (
+    <div>
         <div className="row bg-dark rounded">
             <div className="col-12">
                 {props.links.map(link => {
@@ -68,6 +53,27 @@ const Folder = props => (
             </div>
             <button className="btn btn-success my-2" onClick={() => props.addLink(props._id)}>Add New Link</button>
         </div>
+    </div>
+);
+
+const Folder = props => (
+
+    <div className="col-12 py-2 m-2 bg-secondary text-white border border-2 border-white mt-4 rounded">
+
+        {/* <div className="row"> */}
+        <div className="col-8" onClick={() => props.setActiveFolder(props._id, "active")}>
+            <h4 className="col-10 mt-4">{props.name}</h4>
+        </div>
+        <div className="col-12">
+            <img onClick={() => props.copy(props._id)} className="copy-icon function-button m-1" id="copyButton" alt="Copy Link To Clipboard" src="./assets/images/icons/link.png"></img>
+            <img onClick={() => props.deleteFolder(props._id)} className="delete-icon function-button m-1" id="deleteButton" alt="Delete Link From Folder" src="./assets/images/icons/delete.png"></img>
+        </div>
+        {/* </div> */}
+        <div className="ml-4">
+            <p>{props.description}</p>
+        </div>
+
+        {props.links.length > 0 ? linkStuff(props) : ''}
     </div>
 
 
