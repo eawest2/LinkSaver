@@ -11,14 +11,6 @@ import Authentication from "./components/authentication/Authentication";
 
 //--
 import injectTapEventPlugin from "react-tap-event-plugin";
-// import getMuiTheme from "material-ui/styles/getMuiTheme";
-// import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
-// import { BrowserRouter as Router, Route, Link, Redirect } from "react-router-dom";
-// import HomePage from "./components/HomePage.jsx";
-// import LoginPage from "./containers/LoginPage.jsx";
-// import LogoutFunction from "./containers/LogoutFunction.jsx";
-// import SignUpPage from "./containers/SignUpPage.jsx";
-// import DashboardPage from "./containers/DashboardPage.jsx";
 import Auth from "./modules/Auth";
 import copy from 'copy-to-clipboard';
 
@@ -28,9 +20,6 @@ axios.defaults.headers.common['Authorization'] =
 
 
 injectTapEventPlugin();
-
-
-
 
 //----------
 //Define State
@@ -314,8 +303,6 @@ class App extends Component {
   //Render Page
   //----------
   render() {
-
-    console.log('>>>>> JHKSDGJSDGJSJHKSD');
     if (this.state.authenticated)
 
       return (
